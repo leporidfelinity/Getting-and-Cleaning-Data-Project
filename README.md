@@ -10,7 +10,7 @@ You should create one R script called run_analysis.R that does the following.
 4. Appropriately labels the data set with descriptive activity names.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-## how the run_analysis.R script work
+## how the run_analysis.R script works
 
 1. Package "data.table" and "reshape2" are required for this project, so load them first (assuming they are installed)
 2. Load all datasets for both test and train from the home directory
