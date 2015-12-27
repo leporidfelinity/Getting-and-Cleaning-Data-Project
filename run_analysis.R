@@ -36,15 +36,15 @@ X_train <- X_train[,extract_measurements]
 
 # Uses descriptive activity names to name the activities in the data set
 # Complete step 3
-y_test[,2] = activity_labels[y_test[,1],2]
-y_train[,2] = activity_labels[y_train[,1],2]
+y_test[,2] <- activity_labels[y_test[,1],2]
+y_train[,2] <- activity_labels[y_train[,1],2]
 
 # Name y and subject data
 # Complete step 4
-names(y_test) = c("Activity_Label", "Activity")
-names(subject_test) = "Subject"
-names(y_train) = c("Activity_Label", "Activity")
-names(subject_train) = "Subject"
+names(y_test) <- c("Activity_Label", "Activity")
+names(subject_test) <- "Subject"
+names(y_train) <- c("Activity_Label", "Activity")
+names(subject_train) <- "Subject"
 
 # Bind X, y, and subject data for both test and train
 test_data <- cbind(y_test, subject_test, X_test)
@@ -52,13 +52,13 @@ train_data <- cbind(y_train, subject_train, X_train)
 
 # Merge test and train data
 # Complete step 1
-merged_data = rbind(test_data, train_data)
+merged_data <- rbind(test_data, train_data)
 
 # Make specific tidy data
 # Complete step 5
 # Melt data
-id_labels   = c("Activity_Label", "Activity", "Subject")
-measure_vars_labels = setdiff(colnames(merged_data), id_labels)
+id_labels <- c("Activity_Label", "Activity", "Subject")
+measure_vars_labels <- setdiff(colnames(merged_data), id_labels)
 melt_data <- melt(merged_data, id = id_labels, measure.vars = measure_vars_labels)
 
 # Apply mean function to dataset using dcast function
