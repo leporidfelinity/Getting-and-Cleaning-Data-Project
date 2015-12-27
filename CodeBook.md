@@ -46,3 +46,10 @@ The following files are available for the train and test data. Their description
 
 ## Steps to clean up the data and generate the tidy data required
 
+1. Package "data.table" and "reshape2" are required for this project, so load them first (assuming they are installed)
+2. Load all datasets for both test and train from the home directory
+3. Name the X dataset with features, and then extract only the measurements on the mean and standard deviation for each measurement which complete project requirement 2
+4. Uses descriptive activity names to name the activities in the data set which complete project requirement 3
+5. Name y and subject dataset which complete project requirement 4
+6. Bind X, y, and subject data for both test and train and then merge them together which complete project requirement 1
+7. Make specific tidy data as required in project requirement 5 and a tidy_data.txt will be generated in the home directory
